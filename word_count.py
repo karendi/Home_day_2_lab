@@ -1,4 +1,4 @@
-def word_count(statement):
+def words(statement):
   results = {}
   S = statement.split()
   for word in S:
@@ -7,5 +7,3 @@ def word_count(statement):
     else:
       results[word] += 1
   return results
-
-print(word_count("olly olly in come free"))    
