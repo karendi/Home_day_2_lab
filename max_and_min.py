@@ -5,13 +5,17 @@ def find_max_min(arr):
     for x in arr:
         if x < min_value:
             min_value = x
+        elif x == min_value:
+            min_value = x
+
 
         if x > max_value:
             max_value = x
+        elif x == max_value:
+            max_value = x
 
-    results = [min_value , max_value]
-    return results 
-
-
-
-print(find_max_min([8 , 9 , 10 ,1, 2]))
+    if max_value == min_value:
+        results = [min_value]
+    else:
+        results = [min_value , max_value]
+    return results
